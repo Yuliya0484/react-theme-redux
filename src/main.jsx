@@ -1,13 +1,15 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
-import "./components/users/user.jsx";
-import "./index.css";
-import "modern-normalize";
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./components/App";
+// 1. Імпортуємо провайдер
+import { Provider } from "react-redux";
+// 2. Імпортуємо створений раніше стор
+import { store } from "./redux/store";
 
-//"css.lint.unknownProperties": "ignore",
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>
+);
