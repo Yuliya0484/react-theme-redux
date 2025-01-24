@@ -7,6 +7,8 @@
 
 .text {
   flex-grow: 1;
+  text-transform: capitalize;
+  font-style: italic;
 }
 
 .btn {
@@ -33,7 +35,8 @@
 }
 
 .checkbox {
-  width: 24px;
-  height: 24px;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
 }
